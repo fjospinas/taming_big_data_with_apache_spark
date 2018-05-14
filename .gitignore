@@ -1,0 +1,8 @@
+# Environments
+venv
+
+# Pycharm 
+.idea
+
+# Data
+data
