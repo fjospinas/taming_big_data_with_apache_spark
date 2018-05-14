@@ -21,7 +21,7 @@ all_build = text_file.map(lambda x: parse_line(x))
 
 sums = all_build.reduceByKey(lambda a, b: a + b)\
 
-sums = sums.map(lambda (x, y): (y, x)).sortByKey().collect()
+sums = sums.map(lambda x: (x[1], x[0])).sortByKey().collect()
 
 for tup in sums:
     print(tup[1], '%.2f' % tup[0])
